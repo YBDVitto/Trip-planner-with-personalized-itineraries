@@ -1,0 +1,262 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Serif Text', serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #0052d4, #4364f7, #6fb1fc);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Main Container */
+.main-container {
+    display: flex;
+    flex-direction: row;
+    min-height: calc(100vh - 60px);
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+
+.sidebar h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.sidebar__button {
+    background: #0052d4;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.sidebar__button:hover {
+    background: #003a9d;
+}
+
+.sidebar__routes h2 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.search-route-name {
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.search-route-name:hover {
+    transform: scale(1.03);
+}
+
+/* Main Section */
+main {
+    flex: 3;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.search-container input {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-container button {
+    width: 25%;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+    background-color: #218838;
+}
+
+.delete-saved-route {
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#popular-places {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.place {
+    background-color: #f4f4f9;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    width: calc(50% - 10px);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.place:hover {
+    transform: scale(1.05);
+}
+
+.place img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.place h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.place p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #0052d4;
+    color: white;
+    font-size: 14px;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.05);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    .search-container input,
+    .search-container button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .place {
+        width: 100%;
+    }
+}
+
+/* Smartphones */
+@media (max-width: 480px) {
+    header {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .main-container {
+        padding: 5px;
+    }
+
+    .sidebar__button,
+    .search-container input,
+    .search-container button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #map {
+        height: 300px;
+    }
+
+    .place img {
+        height: 150px;
+    }
+
+    .place h3 {
+        font-size: 16px;
+    }
+
+    .place p {
+        font-size: 12px;
+    }
+}

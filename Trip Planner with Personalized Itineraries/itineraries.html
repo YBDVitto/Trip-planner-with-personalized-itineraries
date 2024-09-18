@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="itineraries.css">
+    <title>Your Destination!</title>
+</head>
+<body>
+    <header>
+        <div>
+            <label for="newDestination">Insert another destiantion: </label>
+            <input type="text" placeholder="New destination" id="newDestination">
+            <button id="search-btn" class="btn">Search</button>
+        </div>
+        <h1 id="destination-header"></h1>
+    </header>
+    <main>
+        <div class="trip-btns">
+            <button id="start-trip-btn" class="btn">Start Trip</button>
+            <button id="stop-trip-btn" class="btn">Stop Trip</button>
+        </div>
+        <section>
+            <div style="margin: 10px;">
+                <label for="category-select" id="category-select-label">Choose a category:</label>
+                <select id="category-select">
+                    <option value=""></option>
+                    <option value="restaurant">Restaurants</option>
+                    <option value="cafe">Cafes</option>
+                    <option value="tourist_attraction">Tourist Attractions</option>
+                    <option value="museum">Museums</option>
+                    <option value="bank">Banks</option>
+                    <option value="park">Parks</option>
+                    <option value="hotel">Hotels</option>
+                </select>
+            </div>
+            <div style="margin: 10px;">
+                <label for="travel-mode" id="mode-label">Choose mode of transport:</label>
+                <select id="travel-mode">
+                    <option value="DRIVING">Driving</option>
+                    <option value="BICYCLING">Bicycling</option>
+                    <option value="TRANSIT">Public transport</option>
+                    <option value="WALKING">Walking</option>
+                </select>
+            </div>
+            <p id="trip-duration" style="margin: 10px;"></p>
+        </section>
+        <div id="destination-map"></div>
+        <section id="selected-place">
+            <h4>Selected Place Details</h4>
+        </section>
+        <button id="save-route-btn">Save Route</button>
+        <div>
+            <h1 id="book-hotel"></h1>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 YBD. All rights reserved.</p>
+    </footer>
+
+    <script src="firebase.js" type="module"></script>
+    <script src="itineraries.js" type="module"></script>
+    
+</body>
+</html>

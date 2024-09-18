@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage - Travel Planner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+    <header>
+        <h1>Travel Planner</h1>
+    </header>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <h1 id="current-user"></h1>
+            <button id="logout-btn" class="sidebar__button">Logout</button>
+            <button id="delete-all-routes" class="sidebar__button">DELETE ALL ROUTES</button>
+            <div class="sidebar__routes">
+                <h2>Saved Routes</h2>
+                <div id="saved-routes-list">
+                    <!-- I percorsi salvati appariranno qui -->
+                </div>
+            </div>
+        </div>
+        
+        <main>
+            <section class="search-container">
+                <input placeholder="Search Destination" type="text" id="destination-input">
+                <button id="search-btn">Search</button>
+            </section>
+            <h2>Do not underestimate the places near you!</h2>
+            <div id="map"></div>
+            <section id="popular-places">
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2024 YBD. All rights reserved.</p>
+    </footer>
+    <script src="firebase.js" type="module"></script>
+    <script src="homepage.js" type="module"></script>
+    <div src="places-script"></div>
+</body>
+</html>
